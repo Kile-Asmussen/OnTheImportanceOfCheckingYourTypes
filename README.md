@@ -1,3 +1,7 @@
+# The developers have confirmed that this will be fixed in 2.1
+
+[Bug report discussion](https://forums.factorio.com/viewtopic.php?p=693123)
+
 # What is this mod?
 
 This mod has one line of code:
@@ -37,9 +41,9 @@ end
 ```
 (Code is taken from the actual game files, all intellectual rights belong to Wube, sic comments removed for brevity)
 
-The indicated line looks innocuous until you realize what the purpose of it is. This function is part of the script that automatically generates barrelling recipes for fluids. The `base_icon` variable can either be an [IconData](https://lua-api.factorio.com/latest/types/IconData.html) struct or a [FileName](https://lua-api.factorio.com/latest/types/FileName.html) (i.e. a string).
+The indicated line looks innocuous until you realize what the purpose of it is. This function is part of the script that automatically generates barrelling recipes for fluids. The `base_icon` variable can either be an [ItemPrototype](https://lua-api.factorio.com/2.0.76/prototypes/ItemPrototype.html) struct or a [FileName](https://lua-api.factorio.com/2.0.76/types/FileName.html) (i.e. a string).
 
-`IconData` has a field `icon` which is a file name. So the line tries to access that field, and when it comes up `nil`, defaults to using the value because it must be a string...
+`ItemPrototype` has a field `icon` which is a file name. So the line tries to access that field, and when it comes up `nil`, defaults to using the value because it must be a string...
 
 But wait a second, I hear you say, if `base_icon` can be either a table or a string &mdash; you can't index a string like a table! Why doesn't this code break?
 
