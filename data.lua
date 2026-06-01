@@ -1,0 +1,1 @@
+string.icon = "__base__/code/review/is/important.png"
