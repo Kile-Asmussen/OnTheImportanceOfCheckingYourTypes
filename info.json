@@ -4,7 +4,7 @@
 	"title": "A treatise on the importance of code review",
 	"author": "kashmira-qeel",
 	"description": "Or: why you should use the type function and not the metatable on strings to check whether something is a string.",
-	"factorio_version": ">= 2.0.76",
+	"factorio_version": "2.0",
 	"quality_required": false,
 	"rail_bridges_required": false,
 	"spoiling_required": false,
@@ -13,6 +13,6 @@
 	"expansion_shaders_required": false,
 	"space_travel_required": false,
 	"dependencies" : [
-		"base"
+		"base <= 2.0.76"
 	]
 }
