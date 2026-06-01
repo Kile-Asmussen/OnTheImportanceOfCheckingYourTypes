@@ -1,6 +1,6 @@
 {
 	"name": "OnTheImportanceOfCheckingYourTypes",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"title": "A treatise on the importance of code review",
 	"author": "kashmira-qeel",
 	"description": "Or: why you should use the type function and not the metatable on strings to check whether something is a string.",
